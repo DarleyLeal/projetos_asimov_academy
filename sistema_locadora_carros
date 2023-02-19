@@ -1,0 +1,132 @@
+print('Bem vindo a Locadora de Carros\n')
+
+carros = ['[0] Chevrolet Tracker - R$ 120 / dia',
+            '[1] Chevrolet Onix - R$ 90 / dia',
+            '[2] Chevrolet Spin - R$ 150 / dia',
+            '[3] Hyundai HB20 - R$ 85 / dia',
+            '[4] Hyundai Tucson - R$ 120 / dia',
+            '[5] Fiat Uno - R$ 60 / dia',
+            '[6] Fiat Mobi - R$ 70 / dia',
+            '[7] Fiat Pulse - R$ 130 / dia']
+
+carros_alugados = list()
+
+while True:
+    menu = input(f'O que você deseja fazer?\n'
+                 f'\n1 - Mostrar portifólio\n'
+                 f'2 - Alugar carro\n'
+                 f'3 - Devolver carro\n')
+
+    if menu == '1':
+        for c in carros:
+            print(c)
+        print()
+
+    elif menu == '2':
+        for c in carros:
+            print(c)
+        print()
+
+        dias = int(input('Quantos dias você deseja alugar: '))
+        carro = int(input(f'Qual carro você deseja? (Nº do carro)'))
+        if carro == 0:
+            print(f'Você escolheu Chevrolet Tracker por {dias} dias\n'
+                  f'O aluguel totalizará R$ {dias * 120} reais')
+            aluguel = input('Deseja alugar? S/N').upper().strip()
+            if aluguel == 'S':
+                carros_alugados.append(carros.pop(carro))
+                continue
+            else:
+                break
+        elif carro == 1:
+            print(f'Você escolheu Chevrolet Onix por {dias} dias\n'
+                  f'O aluguel totalizará R$ {dias * 90} reais')
+            aluguel = input('Deseja alugar? S/N').upper().strip()
+            if aluguel == 'S':
+                carros_alugados.append(carros.pop(carro))
+                continue
+            else:
+                break
+        elif carro == 2:
+            print(f'Você escolheu Chevrolet Spin por {dias} dias\n'
+                  f'O aluguel totalizará R$ {dias * 150} reais')
+            aluguel = input('Deseja alugar? S/N').upper().strip()
+            if aluguel == 'S':
+                carros_alugados.append(carros.pop(carro))
+                continue
+            else:
+                break
+        elif carro == 3:
+            print(f'Você escolheu Hyundai HB20 por {dias} dias\n'
+                  f'O aluguel totalizará R$ {dias * 85} reais')
+            aluguel = input('Deseja alugar? S/N').upper().strip()
+            if aluguel == 'S':
+                carros_alugados.append(carros.pop(carro))
+                continue
+            else:
+                break
+        elif carro == 4:
+            print(f'Você escolheu Hyundai Tucson por {dias} dias\n'
+                  f'O aluguel totalizará R$ {dias * 120} reais')
+            aluguel = input('Deseja alugar? S/N').upper().strip()
+            if aluguel == 'S':
+                carros_alugados.append(carros.pop(carro))
+                continue
+            else:
+                break
+        elif carro == 5:
+            print(f'Você escolheu Fiat Uno por {dias} dias\n'
+                  f'O aluguel totalizará R$ {dias * 60} reais')
+            aluguel = input('Deseja alugar? S/N').upper().strip()
+            if aluguel == 'S':
+                carros_alugados.append(carros.pop(carro))
+                continue
+            else:
+                break
+        elif carro == 6:
+            print(f'Você escolheu Fiat Mobi por {dias} dias\n'
+                  f'O aluguel totalizará R$ {dias * 70} reais')
+            aluguel = input('Deseja alugar? S/N').upper().strip()
+            if aluguel == 'S':
+                carros_alugados.append(carros.pop(carro))
+                continue
+            else:
+                break
+        elif carro == 7:
+            print(f'Você escolheu Fiat Pulse por {dias} dias\n'
+                  f'O aluguel totalizará R$ {dias * 130} reais')
+            aluguel = input('Deseja alugar? S/N').upper().strip()
+            if aluguel == 'S':
+                carros_alugados.append(carros.pop(carro))
+                continue
+            else:
+                break
+    else:
+        print('Segue a lista de carros alugados, qual você deseja devolver? ')
+        for i, c in enumerate(carros_alugados):
+            print(i, c)
+        print()
+        cod = int(input('Digite o código do carro: '))
+        if cod == 0:
+            carros.append(carros_alugados.pop(cod))
+        elif cod == 1:
+            carros.append(carros_alugados.pop(cod))
+        elif cod == 2:
+            carros.append(carros_alugados.pop(cod))
+        elif cod == 3:
+            carros.append(carros_alugados.pop(cod))
+        elif cod == 4:
+            carros.append(carros_alugados.pop(cod))
+        elif cod == 5:
+            carros.append(carros_alugados.pop(cod))
+        elif cod == 6:
+            carros.append(carros_alugados.pop(cod))
+        elif cod == 7:
+            carros.append(carros_alugados.pop(cod))
+    
+    opcao = input('0 - CONTINUAR | 1 - SAIR ')
+    if opcao == '0':
+        continue
+    else:
+        break
+            
