@@ -1,0 +1,37 @@
+lista_nomes = list()
+while True:
+    nome = input('Digite um nome: ').title().strip()
+    if len(nome) > 3:
+        lista_nomes.append(nome)
+        break
+    else:
+        print('Seu nome deve ter mais que 3 caracteres')
+        continue
+while True:
+    idade = int(input('Digite sua idade: '))
+    if idade > 0:
+        if idade < 150:
+            lista_nomes.append(idade)
+            break
+    else:
+        print('A sua idade deve ser maior que 0 e menor que 150')
+        continue
+while True:
+    estado_civil = input('Digite seu estado civil: S, C, V, D ').upper().strip()[0]
+    if estado_civil in 'SCVD':
+        lista_nomes.append(estado_civil)
+        break
+    else:
+        print('Opção inválida, tente novamente!')
+        continue
+while True:
+    sexo = input('Digite seu sexo: F, M ').upper().strip()
+    if sexo in 'FM':
+        lista_nomes.append(sexo)
+        break
+    else:
+        print('Digite apenas F ou M!')
+        continue
+print(lista_nomes)
+
+
