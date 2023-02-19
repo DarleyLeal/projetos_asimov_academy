@@ -1,0 +1,32 @@
+print('\033[1;33mCALCULADORA\033[m') #FAZ IMPRESSÃO DO MENU COM COR
+while True:
+    primeiro_numero = float(input('Digite o 1º número: '))
+    opcao = input(f'Escolha uma opção para efetuar o cálculo: '
+                  f'\n1 - Adição: + '
+                  f'\n2 - Subtração: - '
+                  f'\n3 - Multiplicação: * '
+                  f'\n4 - Divisão: / '
+                  f'\n5 - Exponenciação: ** ')
+    segundo_numero = float(input('Digite o segundo número: '))
+    print()
+    if opcao == '+':
+        soma = primeiro_numero + segundo_numero
+        print(f'A soma entre {primeiro_numero} e {segundo_numero} = {soma}')
+    elif opcao == '-':
+        sub = primeiro_numero - segundo_numero
+        print(f'A subtração entre {primeiro_numero} e {segundo_numero} = {sub}')
+    elif opcao == '*':
+        mult = primeiro_numero * segundo_numero
+        print(f'A multiplicação entre {primeiro_numero} e {segundo_numero} = {mult}')
+    elif opcao == '/':
+        div = primeiro_numero / segundo_numero
+        print(f'A divisão entre {primeiro_numero} e {segundo_numero} = {div}')
+    elif opcao == '**':
+        exp = primeiro_numero ** segundo_numero
+        print(f'A exponenciação entre {primeiro_numero} e {segundo_numero} = {exp}')
+    print()
+    novo_calculo = input('Deseja efetuar mais algum cálculo? S/N ').upper().strip()[0]
+    if novo_calculo == 'S':
+        continue
+    else:
+        break
